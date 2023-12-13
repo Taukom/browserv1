@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>browser</title>
+    <link rel="stylesheet" href="static/styles/stylesabout.css">
+
+
+    <script>
+        function digitalClock() {
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            //* добавление ведущих нулей */
+            if (hours < 10) hours = "0" + hours;
+            if (minutes < 10) minutes = "0" + minutes;
+            if (seconds < 10) seconds = "0" + seconds;
+            document.getElementById("id_clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+            setTimeout("digitalClock()", 1000);
+        }
+
+    </script>
+</head>
+
+
+<body>
+
+
+    <dev id="header">
+        <div class="menu">
+            <div class="logo">
+                <h1>Light</h1>
+            </div>
+            <div class="Top_menu">
+                <ul>
+                    <li class="top2">
+                        <div id="id_clock"></div>
+                        <script>digitalClock();</script>
+                    </li>
+                    <li><a href="index.html" class="ho" id="ho" onmouseover="hoOn()" onmouseout="hoOff()">Home</a></li>
+                    <li><a href="picture.html" class="pi" id="pi" onmouseover="piOn()" onmouseout="piOff()">Pictures</a>
+                    </li>
+                    <li><a href="game.html" class="ga" id="ga" onmouseover="gaOn()" onmouseout="gaOff()">Game</a></li>
+                    <li><a href="about.html" class="ab" id="ab" onmouseover="abOn()" onmouseout="abOff()">About</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </dev>
+
+
+    <dev class="bodys">
+
+
+        <!-- <div class="text1">
+            <p class="p_1">Этот сайт сделан для кайфа,
+                извините если ваша картинка
+                попала сюда без разрешения)</p>
+
+
+        </div> -->
+
+        <div class="opopa">
+
+            <ul>
+                <li>
+                    <a href="https://vk.com/kharkovsky6" target="_blank" class="vka">
+                        <img width="120" height="120" src="https://img.icons8.com/color/144/vk-circled--v1.png"
+                            alt="vk-circled--v1" />
+                    </a>
+                </li>
+                <li><a href="https://www.twitch.tv/taukom" target="_blank"><img width="140" height="140" src="https://img.icons8.com/3d-fluency/188/twitch.png"
+                            alt="twitch" />
+
+                    </a></li>
+                <li><a href="https://www.youtube.com/channel/UCkFraScniVDjgDusBOfk4Fw" target="_blank">
+                    <img width="120" height="120" src="https://img.icons8.com/color/144/000000/youtube--v2.png" alt="youtube--v2"/>
+                    </a></li>
+
+            </ul>
+
+
+        </div>
+
+    </dev>
+
+
+
+    <!-- <div class="Bottom_menu">
+        <ul>
+            <li>
+                <p>2023</p>
+            </li>
+            <li>
+                <p>2023</p>
+            </li>
+            <li>
+                <p>2023</p>
+            </li>
+        </ul>
+    </div> -->
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
